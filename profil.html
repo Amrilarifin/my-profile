@@ -20,34 +20,128 @@
                 url(AMRIL.jpg);"></div>
             </div>
             <div class="description">
-                <h1>Amril arifin</h1>
-                <p>Front End Designer</p>
-                <a href="#" class="buton bg-green">Contact</a>
-                <a href="#" class="button
-                border-blue">Resume</a>
+                <h1 id="pName">Amril arifin</h1>
+                <p id="pRole">Front End Designer</p>
+                <a href="#input-from" class="button bg-green">Contact</a>
+                <a href="#" class="button bg-blue">Resume</a>
             </div>
             <div class="information">
                 <div class="data">
                     <p class="field">Asal sekolah</p>
-                    <p class="text-gray">:  SMK YPT TEGAL</p>
+                    <p id="pAsal sekolah" class="text-gray">:  SMK YPT TEGAL</p>
                 </div>
                 <div class="data">
                     <p class="field">Kelas</p>
-                    <p class="text-gray">:  XI RPL 1</p>
+                    <p id="pKelas" class="text-gray">:  XI RPL 1</p>
                 </div>
                 <div class="data">
                     <p class="field">Agama</p>
-                    <p class="text-gray">:  Islam</p>
+                    <p id="pAgama" class="text-gray">:  Islam</p>
                 </div>
                 <div class="data">
-                    <p class="field">Tempat Tanggal Lahir</p>
-                    <p class="text-gray">:  Tegal, 08 juni 2003</p>
+                    <p class="field">TTL</p>
+                    <p id="pTTL" class="text-gray">:  Tegal, 08 juni 2003</p>
                 </div>
                 <div class="data">
                     <p class="field">Alamat</p>
-                    <p class="text-gray">:  Desa pacul</p>
+                    <p id="pAlamat" class="text-gray">:  Desa pacul</p>
                 </div>
+
             </div>
         </section>
+        <section id="input-form">
+               <div class="form">
+                   <label>Name</label>
+                   <input id="inpName" type="text" name="name">
+               </div>
+               <div class="form">
+                   <label>Role</label>
+                   <input id="inpRole" type="text" name="role">
+               </div>
+               <div class="form">
+                   <label>Asal Sekolah</label>
+                   <input id="inpAsal Sekolah" type="text" name="Avaliability">
+               </div>
+               <div class="form">
+                   <label>kelas</label>
+                   <input id="inpkelas" type="number" name="age">
+               </div>
+               <div class="form">
+                   <label>Agama</label>
+                   <input id="inpAgama" type="text" name="location">
+               </div>
+               <div class="form">
+                   <label>Tempat Tanggal Lahir</label>
+                   <input id="inpTempat Tanggal Lahir" type="email" name="email">
+               </div>
+               <div class="form">
+                <label>Alamat</label>
+                <input id="inpAlamat" type="email" name="email">
+            </div>
+               <div class="form">
+                   <input onclick="simpanForm()" type="submit" name="submit"
+                   value="SUBMIT" class="bg-blue">
+               </div>
+               <script>
+                var formMenu = document.getElementById("input-form");
+                formMenu.style.display = "none";
+    
+                function editForm(){
+                    if(formMenu.style.display === "none"){
+                        formMenu.style.display = "block";
+                    }else{
+                        formMenu.style.display = "none";
+                    }
+    
+                     var name = document.getElementById("pName").innerHTML;
+                     var role = document.getElementById("pRole").innerHTML;
+                     var available = document.getElementById("pAvailable").innerHTML;
+                     var age = document.getElementById("pAge").innerHTML;
+                     var location = document.getElementById("pLocation").innerHTML;
+                     var email = document.getElementById("pEmail").innerHTML;
+                     var alamat = document.getElementById("pAlamat").innerHTML;
+    
+                     document.getElementById("inpName").value = name;
+                     document.getElementById("inpRole").value = role;
+                     document.getElementById("inpAsal Sekolah").value = asal sekolah;
+                     document.getElementById("inpKelas").value = Kelas;
+                     document.getElementById("inpAgama").value = TTL;
+                     document.getElementById("inpTempat Tanggal Lahir").value = email;
+                     document.getElementById("inpAlamat").value = alamat;
+                }
+    
+                function simpanForm(){
+                    formMenu.style.display = "none";
+                    var name = document.getElementById("inpName").value;
+                    var role = document.getElementById("inpRole").value;
+                    var available = document.getElementById("inpAsal Sekolah").value;
+                    var age = document.getElementById("inpkelas").value;
+                    var location = document.getElementById("inpAgama").value;
+                    var email = document.getElementById("inpTempat Tanggal Lahir").value; 
+                    var email = document.getElementById("inpAlamat").value;
+    
+                    document.getElementById("pName").innerHTML = name;
+                    document.getElementById("pRole").innerHTML = role;
+                    document.getElementById("pAsal sekolah").innerHTML = asal sekolah;
+                    document.getElementById("pKelas").innerHTML = Kelas;
+                    document.getElementById("pAgama").innerHTML = agama;
+                    document.getElementById("pTempat Tanggal Lahir").innerHTML = TTL; 
+                    document.getElementById("pAlamat").innerHTML = alamat;   
+    
+                }
+                 function showMenu(){
+                     var menu = document.getElementById("menu");
+                     var box = document.getElementById("box-profile");
+    
+                    if(menu.style.display === "block"){
+                        menu.style.display = "none";
+                        box.style.paddingTop = "0px";
+                    } else{
+                        menu.style.display = "block";
+                        box.style.paddingTop = "125px";
+                    }
+    
+                 }
+       </section>
     </body>
 </html>

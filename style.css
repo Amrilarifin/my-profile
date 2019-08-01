@@ -154,3 +154,38 @@ section#box-profile{
 .information .data p{
     float: left;
 }
+/* form */
+section#input-form{
+    position: relative;
+    max-width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 60px;
+    border-radius: 6px;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 0 7px 0px rgba(136, 146, 146, 0,2);
+    padding: 30px;
+}
+#input-form .form{
+    width: 100%;
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+label{
+    font-family: 'Helvetica',sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+input{
+    font-family: 'Helvetica',sans-serif;
+    padding: 10px 20px 10px 20px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #8888;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    
+}
